@@ -1,0 +1,23 @@
+{
+  // 关闭输入时自动显示建议
+  "editor.quickSuggestions": {
+    "other": false,
+    "comments": false,
+    "strings": false
+  },
+
+  // 关闭触发字符（如 "."、"("）自动弹出建议
+  "editor.suggestOnTriggerCharacters": false,
+
+  // 关闭参数提示（函数调用时的参数框）
+  "editor.parameterHints.enabled": false,
+
+  // 关闭自动补全建议的预览（灰色文字）
+  "editor.inlineSuggest.enabled": false,
+
+  // 关闭建议框的单词提示（可选）
+  "editor.suggest.showWords": false,
+
+  // 关闭光标悬停时的悬浮提示（可选）
+  "editor.hover.enabled": false
+}

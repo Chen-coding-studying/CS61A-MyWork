@@ -44,5 +44,23 @@ from operator import mul
 
 def pi_term(k):
     return 8 / mul(4 * k - 3, 4 * k - 1)
+print(summation(100, pi_term))
 
-print(summation(100000000, pi_term))
+"""
+ Higher-order functions 生成函数？ 
+"""
+def make_adder(n): 
+    
+    def adder(k):
+        return k + n
+
+    return adder
+print(make_adder(1) ( 2 )) 
+
+'''
+ Lambad Expressions
+'''
+square = lambda x: x * x
+print(square(4))
+
+

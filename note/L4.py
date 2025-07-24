@@ -39,3 +39,10 @@ def sum_cubes(n):
     return total        
     """
     return summation(n,cube)
+
+from operator import mul
+
+def pi_term(k):
+    return 8 / mul(4 * k - 3, 4 * k - 1)
+
+print(summation(100000000, pi_term))

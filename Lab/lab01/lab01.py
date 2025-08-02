@@ -8,7 +8,15 @@ def digit(n, k):
     >>> digit(3579, 10)
     0
     """
-    return ____
+    x = 0
+
+    if k >= len(str(n)):
+        x = 0
+    
+    else:
+        x = n // (10 ** k) % 10
+            
+    return x #太累赘。。。。。。。
 
 
 def middle(a, b, c):
@@ -26,8 +34,11 @@ def middle(a, b, c):
     >>> middle(30, 5, 40)
     30
     """
-    return ____
-
+    
+    def cha(n):
+        return abs(n - (a + b + c) / 3)
+    
+    return min(cha(a),cha(b),cha(c)) #傻了。。。。。。
 
 def falling(n, k):
     """Compute the falling factorial of n to depth k.
@@ -42,7 +53,17 @@ def falling(n, k):
     1
     """
     "*** YOUR CODE HERE ***"
+    x = 1
+    
+    for a in range(k):
+        x = x * (n - a)
 
+    return x
+
+
+    
+
+    
 
 def divisible_by_k(n, k):
     """
@@ -65,7 +86,12 @@ def divisible_by_k(n, k):
     0
     """
     "*** YOUR CODE HERE ***"
-
+    
+    if n % k == 0:
+        for a in range(n//k):
+            return k*(a + 1)
+    else:
+        return 0     
 
 def sum_digits(y):
     """Sum all the digits of y.
@@ -81,7 +107,7 @@ def sum_digits(y):
     6
     """
     "*** YOUR CODE HERE ***"
-
+    return sum(int(d) for d in str(y))
 
 def double_eights(n):
     """Return true if n has two eights in a row.
@@ -99,4 +125,9 @@ def double_eights(n):
     False
     """
     "*** YOUR CODE HERE ***"
+    count=0
+    for a in str(n):
+        if int(a) == 8:
+            count += 1
 
+    return count % 2 == 0    

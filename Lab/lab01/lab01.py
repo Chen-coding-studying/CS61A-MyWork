@@ -35,10 +35,7 @@ def middle(a, b, c):
     30
     """
     
-    def cha(n):
-        return abs(n - (a + b + c) / 3)
-    
-    return min(cha(a),cha(b),cha(c)) #傻了。。。。。。
+    return a + b + c - min( a , b , c ) - max ( a , b , c ) #傻了。。。。。。
 
 def falling(n, k):
     """Compute the falling factorial of n to depth k.

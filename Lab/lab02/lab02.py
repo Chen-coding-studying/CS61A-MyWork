@@ -14,7 +14,12 @@ def composite_identity(f, g):
     False
     """
     "*** YOUR CODE HERE ***"
+    
+    def text(x):
+        return f(g(x)) == g(f(x))
+ 
 
+    return text 
 
 def sum_digits(y):
     """Return the sum of the digits of non-negative integer y."""
@@ -60,7 +65,12 @@ def count_cond(condition):
     8
     """
     "*** YOUR CODE HERE ***"
+    m = 0 
+    for i in range (0,condition):
+        if condition % (i+1) == 0:
+            m += 1
 
+    return m - 2
 
 def multiple(a, b):
     """Return the smallest number n that is a multiple of both a and b.
@@ -71,6 +81,13 @@ def multiple(a, b):
     42
     """
     "*** YOUR CODE HERE ***"
+    n = max(a,b)
+    while True:
+        if n%a == 0 and a % b == 0:
+            return n
+        n += 1
+
+
 
 
 
@@ -101,4 +118,17 @@ def cycle(f1, f2, f3):
     19
     """
     "*** YOUR CODE HERE ***"
-
+    
+    def g(n):
+        def h(x):
+            i = 0 
+            while i < n:
+                if i % 3 == 0:
+                    x = f1(x)
+                elif i % 3 == 1:
+                    x = f2(x)
+                else: 
+                    x == f3(x)
+            return x
+        return h
+    return g

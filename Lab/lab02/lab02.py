@@ -18,7 +18,6 @@ def composite_identity(f, g):
     def text(x):
         return f(g(x)) == g(f(x))
  
-
     return text 
 
 def sum_digits(y):
@@ -128,7 +127,7 @@ def cycle(f1, f2, f3):
                 elif i % 3 == 1:
                     x = f2(x)
                 else: 
-                    x == f3(x)
+                    x = f3(x)
             return x
         return h
     return g
